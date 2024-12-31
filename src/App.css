@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -121,13 +120,14 @@ body {
 }
 
 .main-content {
-  margin-left: 45%;
-  width: 60%;
+  margin-left: 40%;
+  min-width: 60%;
+  max-width: 100%;
   padding: 20px 10px;
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: #001C30;
   color: #ccd6f6;
-  height: 100vh;
 }
 
 

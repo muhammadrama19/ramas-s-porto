@@ -8,15 +8,13 @@ const Exp = ({ date, title, description, badges }) => {
     <Card className="experience-card mb-3">
       <Card.Body>
         <Row>
-          <Col md={4} sm={12} className="left-column">
-            <Card.Subtitle className="experience-date">
-              <small>{date}</small>
-            </Card.Subtitle>
-          </Col>
-          <Col md={8} sm={12}>
+          <Col md={12} sm={12}>
             <Card.Title className="experience-title">
               {title} 
             </Card.Title>
+            <Card.Subtitle className="experience-date">
+              <small>{date}</small>
+            </Card.Subtitle>
             <Card.Text className="experience-description">
               {description}
             </Card.Text>

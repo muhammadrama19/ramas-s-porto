@@ -4,6 +4,7 @@
     border-radius: 10px;
     border: none;
     padding: 1.5rem;
+    padding: 1rem !important; 
   }
   
   .experience-card:hover {

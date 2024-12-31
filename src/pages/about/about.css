@@ -2,10 +2,10 @@
     text-align: left;
 }
 
-.about-section {
+/* .about-section {
     max-height: 100%;
     overflow-y: auto;
-}
+} */
 
 .about-section::-webkit-scrollbar {
     display: none;
@@ -13,4 +13,9 @@
 .about-section {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+.work-card{
+    
+    margin-bottom: 16px;
 }
