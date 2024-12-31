@@ -1,0 +1,79 @@
+.experience-card {
+    background-color: #001c30;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 1.5rem;
+  }
+  
+  .experience-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .experience-card:hover .experience-title {
+    color: #64CCC5; /* Change to your desired hover color */
+  }
+
+  .experience-row {
+    display: flex;
+    align-items: flex-start; /* Aligns date and content at the top */
+    gap: 1rem;
+  }
+
+  .experience-date {
+    color: #8b949e;
+    font-size: 0.95rem;
+    white-space: nowrap; 
+    flex-shrink: 0; 
+    padding-right: 1rem;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .experience-content {
+    flex-grow: 1; 
+  }
+  
+  .experience-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  .arrow-icon {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    color: #58a6ff;
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  
+  .badge-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+
+  }
+  
+  .badge-custom{
+    background-color: #64ccc553 !important;
+    color: #DAFFFB;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    align-items: start;
+    font-weight: lighter;
+  }
+
