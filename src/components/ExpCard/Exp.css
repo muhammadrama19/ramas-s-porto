@@ -3,8 +3,9 @@
     color: white;
     border-radius: 10px;
     border: none; 
-    padding: 1rem !important;
+    padding: 0px 0px !important;
     transition: all 0.3s ease;
+    position: relative;
   }
   
   .experience-card:hover {
@@ -14,7 +15,7 @@
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 1rem !important; 
+    padding: 0px 0px !important;
     transform: none;
   }
 

@@ -10,13 +10,17 @@ const Exp = ({ date, title, description, badges }) => {
         <Row>
           <Col md={12} sm={12}>
             <Card.Title className="experience-title">
-              {title} 
+              {title}
             </Card.Title>
             <Card.Subtitle className="experience-date">
               <small>{date}</small>
             </Card.Subtitle>
             <Card.Text className="experience-description">
-              {description}
+              <ul>
+                {description.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
             </Card.Text>
             <div className="badge-container">
               {badges.map((badge, index) => (

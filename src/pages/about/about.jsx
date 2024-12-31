@@ -1,5 +1,4 @@
-// pages/About.js
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./about.css";
 import Exp from "../../components/ExpCard/Exp";
@@ -11,13 +10,41 @@ import imageWork4 from "../../assets/tttt.png";
 import imageWork5 from "../../assets/DDDD.png";
 
 const About = () => {
+  const subtitleRefs = useRef([]);
+  const [hoveredStates, setHoveredStates] = useState([false, false]); // Adjust size based on subtitle count
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = subtitleRefs.current.indexOf(entry.target);
+          if (index !== -1) {
+            setHoveredStates((prevState) => {
+              const newState = [...prevState];
+              newState[index] = entry.isIntersecting; 
+              return newState;
+            });
+          }
+        });
+      },
+      { threshold: 0.5 } 
+    );
+  
+    subtitleRefs.current.forEach((ref) => ref && observer.observe(ref));
+  
+    return () => {
+      subtitleRefs.current.forEach((ref) => ref && observer.unobserve(ref));
+    };
+  }, []);
+  
+
   const experiences = [
     {
       date: "Feb 2024 - Oktober 2024",
       title: "Front-End Developer - Politeknik Negeri Bandung",
       description: [
         "Developed the front end for a touchless exhibition app utilizing Kinect sensors as part of a lecturer's project research.",
-        "Assisted with backend tasks, including migrating and organizing data from spreadsheets into structured SQL files using Python."
+        "Assisted with backend tasks, including migrating and organizing data from spreadsheets into structured SQL files using Python.",
       ],
       badges: ["HTML", "JavaScript", "CSS", "Python", "PostgreSQL"],
     },
@@ -27,7 +54,7 @@ const About = () => {
       description: [
         "Conducted mentoring sessions for 24 participants, with a focus on user experience principles, including heuristics of design and usability.",
         "Supervised the creation of essential documents, such as software requirements and task outlines, ensuring clarity and alignment with best practices.",
-        "Personally contributed by providing detailed feedback, guiding participants to improve their designs, and fostering an understanding of user-centered approaches."
+        "Personally contributed by providing detailed feedback, guiding participants to improve their designs, and fostering an understanding of user-centered approaches.",
       ],
       badges: ["UI/UX", "Figma", "Usability", "Prototyping"],
     },
@@ -36,39 +63,75 @@ const About = () => {
     {
       src: myImage,
       title: "LalajoEuy Movie ",
-      description: "Lalajo Euy! is a movie platform app where users can explore and review movies, supported by a CMS for admin content management. The project involved creating a modern interface, implementing authentication, conducting testing, and ensuring a seamless user experience. It highlights skills in full-stack development and deployment.",
-      badges: ["React.js", "React-Bootstrap", "SCSS", "Material-UI","REST API", "Express.js", "MySQL", "JWT", "OAuth", "Git", "Vercel", "Jest", "Selenium"],
+      description:
+        "Lalajo Euy! is a movie platform app where users can explore and review movies, supported by a CMS for admin content management. The project involved creating a modern interface, implementing authentication, conducting testing, and ensuring a seamless user experience. It highlights skills in full-stack development and deployment.",
+      badges: [
+        "React.js",
+        "React-Bootstrap",
+        "SCSS",
+        "Material-UI",
+        "REST API",
+        "Express.js",
+        "MySQL",
+        "JWT",
+        "OAuth",
+        "Git",
+        "Vercel",
+        "Jest",
+        "Selenium",
+      ],
     },
     {
       src: imageWork2,
       title: "Sentiment Analysis Dashboard of Gojek App Reviews on Play Store",
-      description: "Sentiment Analysis powered by RoBERTa model to analyze Gojek app reviews on Play Store. The project involved creating use case diagrams, process diagrams also designing interface. ETL process was done to clean the data and then the data was analyzed using RoBERTa model. The result was displayed in a dashboard.",
-      badges: ["Python", "RoBERTa", "Figma", "Pandas","Prototyping", "Data Analysis", "Data Visualization"],
+      description:
+        "Sentiment Analysis powered by RoBERTa model to analyze Gojek app reviews on Play Store. The project involved creating use case diagrams, process diagrams also designing interface. ETL process was done to clean the data and then the data was analyzed using RoBERTa model. The result was displayed in a dashboard.",
+      badges: [
+        "Python",
+        "RoBERTa",
+        "Figma",
+        "Pandas",
+        "Prototyping",
+        "Data Analysis",
+        "Data Visualization",
+      ],
     },
     {
       src: imageWork3,
       title: "AKU Si PEMBURU KUYANG",
-      description: "Aku si PEMBURU KUYANG is a game that tells the story of a shaman who is hunting for a KUYANG. The game consists of two mode, endless mode and story mode. I tasked to create story mode and world building also storyline. ",
+      description:
+        "Aku si PEMBURU KUYANG is a game that tells the story of a shaman who is hunting for a KUYANG. The game consists of two mode, endless mode and story mode. I tasked to create story mode and world building also storyline. ",
       badges: ["Godot Engine", "GDScript", "Blender", "Adobe Illustrator"],
     },
     {
       src: imageWork4,
-      title:"VoteHub",
-      description: "Votehub is static website that developed to provide information about President Election 2024. This Website is to fullfill as final assignments for User Interface Design Class. We developed the website based on user persona that gathered through interview to ensure User Centered Design.",
-      badges: ["Figma", "HTML", "CSS", "JavaScript"]
+      title: "VoteHub",
+      description:
+        "Votehub is static website that developed to provide information about President Election 2024. This Website is to fullfill as final assignments for User Interface Design Class. We developed the website based on user persona that gathered through interview to ensure User Centered Design.",
+      badges: ["Figma", "HTML", "CSS", "JavaScript"],
     },
     {
       src: imageWork5,
       title: "Tic Tac Toe Game",
-      description: "Tic Tac Toe Game is a simple game that developed to fullfill as final assignments for Fundamental Programming. Built on C language.",
-      badges: ["C", "Fundamental Programming"]
-    }
-
-
+      description:
+        "Tic Tac Toe Game is a simple game that developed to fullfill as final assignments for Fundamental Programming. Built on C language.",
+      badges: ["C", "Fundamental Programming"],
+    },
   ];
   return (
     <Container fluid className="about-section">
-      <Row>
+      <Row className="mobile-only">
+        <Col xs={12} sm={12} md={12} className="mx-3">
+          <h2
+            ref={(el) => (subtitleRefs.current[0] = el)} 
+            className={`about-subtitle ${hoveredStates[0] ? "hovered" : ""}`}
+          >
+            About
+          </h2>
+        </Col>
+      </Row>
+
+      <Row className="mb-4">
         <Col xs={12} sm={12} md={12} className="mx-3">
           <p className="about-description">
             Hi, I'm Rama – a passionate and driven Front-End Developer with
@@ -98,7 +161,17 @@ const About = () => {
           </p>
         </Col>
       </Row>
-      <Row className="mt-4 mb-4">
+      <Row className="mobile-only">
+        <Col xs={12} sm={12} md={12} className="mx-3">
+          <h2
+            ref={(el) => (subtitleRefs.current[1] = el)} 
+            className={`about-subtitle ${hoveredStates[1] ? "hovered" : ""}`}
+          >
+            Experiences
+          </h2>
+        </Col>
+      </Row>
+      <Row className="mb-4">
         <Col xs={12} md={12}>
           {experiences.map((exp, index) => (
             <Exp
@@ -111,7 +184,17 @@ const About = () => {
           ))}
         </Col>
       </Row>
-      <Row className="mt-4 mb-4">
+      <Row className="mobile-only">
+        <Col xs={12} sm={12} md={12} className="mx-3">
+          <h2
+            ref={(el) => (subtitleRefs.current[2] = el)} 
+            className={`about-subtitle ${hoveredStates[2] ? "hovered" : ""}`}
+          >
+            Projects
+          </h2>
+        </Col>
+      </Row>
+      <Row className="mb-4">
         <Col xs={12} md={12}>
           {projects.map((project, index) => (
             <WorkCard

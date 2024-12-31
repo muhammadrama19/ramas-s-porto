@@ -1,14 +1,21 @@
 .links {
-    color: #c4d0ec; /* Set the initial color */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    color: #c4d0ec; 
+    transition: color 0.3s ease; 
   }
   
   .links:hover {
-    color: #64CCC5; /* Change to your desired hover color */
+    color: #64CCC5; 
+  }
+  .links:active {
+    color: #64CCC5; 
   }
 
 .sidebar-title{
     text-align: left;
     font-size: 3.5rem;
     font-weight: bold;
+}
+
+.sidebar{
+  color: #ffff;
 }

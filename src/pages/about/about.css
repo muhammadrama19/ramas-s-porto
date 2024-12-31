@@ -1,11 +1,9 @@
 .about-description {
     text-align: left;
+    color: #ffff;
+    padding-left: 10px !important;
+    
 }
-
-/* .about-section {
-    max-height: 100%;
-    overflow-y: auto;
-} */
 
 .about-section::-webkit-scrollbar {
     display: none;
@@ -16,6 +14,58 @@
 }
 
 .work-card{
-    
     margin-bottom: 16px;
+}
+
+.about-subtitle {
+    display: none;
+}
+
+.mobile-only {
+    display: none; 
+}
+
+@media screen and (max-width: 768px) {
+    .about-description {
+        padding-left: 0px !important;
+    }
+    .about-subtitle {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: left;
+        color: #ffff;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative; 
+        text-decoration: none;
+        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition for color */
+    }
+    
+    .about-subtitle::after {
+        content: '';
+        position: absolute;
+        bottom: -5px; 
+        left: 0;
+        width: 0;
+        height: 2px; 
+        background-color: #64CCC5;
+        transition: width 0.5s ease-in-out; 
+    }
+    
+    .about-subtitle.hovered::after {
+        width: 100%; 
+    }
+    
+    .about-subtitle.hovered {
+        color: #64CCC5; 
+    }
+
+    .mobile-only {
+        display: block; 
+        margin-top: 20px;
+    }
+    .exp-container{
+        margin-top: 0px;
+    }
 }

@@ -30,11 +30,11 @@
 }
 
 .work-card-description {
-    word-wrap: break-word; /* Ensure long words break and wrap */
-    white-space: pre-wrap; /* Preserve whitespace and wrap text */
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
-    max-height: 250px; /* Set a max height if needed */
-    margin-bottom: 10px; /* Add margin for spacing */
+    word-wrap: break-word; 
+    white-space: pre-wrap; 
+    text-overflow: ellipsis; 
+    max-height: 250px; 
+    margin-bottom: 10px; 
     font-size: 0.9rem;
     text-align: left;
   }
@@ -52,11 +52,11 @@
 
 @media (max-width: 576px) {
     .work-card-description {
-        max-height: none; /* Remove max-height on small screens */
-        margin-bottom: 20px; /* Increase margin for better spacing */
+        max-height: none; 
+        margin-bottom: 20px;
     }
 
     .badge-container {
-        justify-content:left; /* Center badges on small screens */
+        justify-content:left;
     }
 }
