@@ -8,10 +8,12 @@ const Sidebar = () => {
   return (
     <div className="sidebar mt-5">
       <Container>
-        <h1 className="sidebar-title">Rama Nurimani</h1>
-        <h4 className="sidebar-subtitle">Front End Engineer</h4>
+        <h1 className="sidebar-title"> M. Rama Nurimani</h1>
+        <h4 className="sidebar-subtitle text-decoration-italic"> <em>
+        Front End Engineer
+          </em></h4>
         <p className="sidebar-description">
-        I create seamless and efficient digital solutions.
+        I’m a third-year Informatics Engineering student at Politeknik Negeri Bandung, specializing in front-end development to create efficient, user-friendly, and impactful digital solutions. If there’s anything I can assist with, feel free to email me at rama.nurimani19@gmail.com.
         </p>
         <Nav className="flex-column sidebar-nav">
           <Nav.Link href="#about" className="sidebar-link">
