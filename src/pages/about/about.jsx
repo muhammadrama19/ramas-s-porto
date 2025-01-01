@@ -119,7 +119,7 @@ const About = () => {
     },
   ];
   return (
-    <Container fluid className="about-section">
+    <Container id="about" fluid className="about-section">
       <Row className="mobile-only">
         <Col xs={12} sm={12} md={12} className="mx-3">
           <h2
@@ -131,7 +131,7 @@ const About = () => {
         </Col>
       </Row>
 
-      <Row className="mb-4">
+      <Row className="mb-4" id="about">
         <Col xs={12} sm={12} md={12} className="mx-3">
           <p className="about-description">
             Hi, I'm Rama – a passionate and driven Front-End Developer with
@@ -171,7 +171,7 @@ const About = () => {
           </h2>
         </Col>
       </Row>
-      <Row className="mb-4">
+      <Row id="experiences" className="mb-4">
         <Col xs={12} md={12}>
           {experiences.map((exp, index) => (
             <Exp
@@ -194,7 +194,7 @@ const About = () => {
           </h2>
         </Col>
       </Row>
-      <Row className="mb-4">
+      <Row id="projects" className="mb-4">
         <Col xs={12} md={12}>
           {projects.map((project, index) => (
             <WorkCard

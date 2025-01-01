@@ -17,7 +17,7 @@ const Sidebar = () => {
           <Nav.Link href="#about" className="sidebar-link">
             About
           </Nav.Link>
-          <Nav.Link href="#experience" className="sidebar-link">
+          <Nav.Link href="#experiences" className="sidebar-link">
             Experience
           </Nav.Link>
           <Nav.Link href="#projects" className="sidebar-link">
