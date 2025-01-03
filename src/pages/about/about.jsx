@@ -8,6 +8,7 @@ import imageWork2 from "../../assets/Desktop Mockup 04.png";
 import imageWork3 from "../../assets/Desktop Mockup 07.png";
 import imageWork4 from "../../assets/tttt.png";
 import imageWork5 from "../../assets/DDDD.png";
+import { Links } from "react-router-dom";
 
 const About = () => {
   const subtitleRefs = useRef([]);
@@ -46,7 +47,7 @@ const About = () => {
         "Developed the front end for a touchless exhibition app utilizing Kinect sensors as part of a lecturer's project research.",
         "Assisted with backend tasks, including migrating and organizing data from spreadsheets into structured SQL files using Python.",
       ],
-      badges: ["HTML", "JavaScript", "CSS", "Python", "PostgreSQL"],
+      badges: ["HTML", "JavaScript", "CSS", "Python", "PostgreSQL"]
     },
     {
       date: "July 2024 - August 2024",
@@ -80,6 +81,16 @@ const About = () => {
         "Jest",
         "Selenium",
       ],
+      links: [
+        {
+          label: "Website",
+          url: "https://webdev2024-v75w.vercel.app/",
+        },
+        {
+          label: "GitHub",
+          url: "https://github.com/muhammadrama19/webdev2024"
+        }
+      ]
     },
     {
       src: imageWork2,
@@ -95,6 +106,12 @@ const About = () => {
         "Data Analysis",
         "Data Visualization",
       ],
+      links: [
+        {
+          label: "Dashboard",
+          url: "https://www.figma.com/proto/KmF4zQNrKP2cQf9Cc2fWMw/Rama's-file?node-id=15-759&p=f&t=V1KPT1k5Lo0KSpmQ-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=15%3A759",
+        }
+      ]
     },
     {
       src: imageWork3,
@@ -102,6 +119,12 @@ const About = () => {
       description:
         "Aku si PEMBURU KUYANG is a game that tells the story of a shaman who is hunting for a KUYANG. The game consists of two mode, endless mode and story mode. I tasked to create story mode and world building also storyline. ",
       badges: ["Godot Engine", "GDScript", "Blender", "Adobe Illustrator"],
+      links: [
+        {
+          label: "Game",
+          url: "https://heaplow.itch.io/aku-si-pemburu-kuyang",
+        }
+      ]
     },
     {
       src: imageWork4,
@@ -109,6 +132,12 @@ const About = () => {
       description:
         "Votehub is static website that developed to provide information about President Election 2024. This Website is to fullfill as final assignments for User Interface Design Class. We developed the website based on user persona that gathered through interview to ensure User Centered Design.",
       badges: ["Figma", "HTML", "CSS", "JavaScript"],
+      links: [
+        {
+          label: "Website",
+          url: "https://muhammadrama19.github.io/votehub/",
+        }
+      ]
     },
     {
       src: imageWork5,
@@ -116,6 +145,12 @@ const About = () => {
       description:
         "Tic Tac Toe Game is a simple game that developed to fullfill as final assignments for Fundamental Programming. Built on C language.",
       badges: ["C", "Fundamental Programming"],
+      links: [
+        {
+          label: "GitLab",
+          url: "https://gitlab.com/segfault_tubes_sem1/tictactwo_segfault_tubes"
+        }
+      ]
     },
   ];
   return (
@@ -142,7 +177,8 @@ const About = () => {
           </p>
           <p className="about-description">
             I specialize in building responsive and scalable applications using
-            React.js, Vue.js, Bootstrap, and SCSS. I have a keen eye for detail,
+            React.js, Vue.js, Bootstrap, and CSS. Also have fundamental in UI/UX and familiar with figma. 
+            I have a keen eye for detail,
             which helps me create reusable components that enhance code
             maintainability and efficiency. Additionally, I’m familiar with REST
             APIs, basic SQL, and MongoDB, and I have hands-on experience in
@@ -203,6 +239,7 @@ const About = () => {
               title={project.title}
               description={project.description}
               badges={project.badges}
+              links={project.links}
             />
           ))}
         </Col>

@@ -16,7 +16,7 @@
 }
 
 .work-card-image {
-    width: 100%; 
+    width: 100%;
     height: auto;
     /* max-height: 250px; */
     object-fit: cover;
@@ -30,18 +30,54 @@
 }
 
 .work-card-description {
-    word-wrap: break-word; 
-    white-space: pre-wrap; 
-    text-overflow: ellipsis; 
-    max-height: 250px; 
-    margin-bottom: 10px; 
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    max-height: 250px;
+    margin-bottom: 10px;
     font-size: 0.9rem;
     text-align: left;
-  }
+}
+
+.work-card-link {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
+.work-card-link:hover {
+    color: #64CCC5;
+}
+
+.link-icon {
+    margin-left: 3px;
+    scale: 0.75;
+}
+
+.work-card-link:hover .link-icon {
+    /*move little to corner right if hovered*/
+    transform: translate(3px, -3px);
+    transition: transform 0.3s ease;
+}
+
+
+.links-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #ffff !important;
+}
+
+.badge-container {
+    margin-top: 10px;
+}
 
 .custom-card-body {
     padding: 1rem !important;
-    /* Override the default padding */
 }
 
 .badge-custom {
@@ -52,11 +88,11 @@
 
 @media (max-width: 576px) {
     .work-card-description {
-        max-height: none; 
+        max-height: none;
         margin-bottom: 20px;
     }
 
     .badge-container {
-        justify-content:left;
+        justify-content: left;
     }
 }
