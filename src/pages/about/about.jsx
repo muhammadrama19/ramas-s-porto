@@ -8,6 +8,7 @@ import imageWork2 from "../../assets/Desktop Mockup 04.png";
 import imageWork3 from "../../assets/Desktop Mockup 07.png";
 import imageWork4 from "../../assets/tttt.png";
 import imageWork5 from "../../assets/DDDD.png";
+import imageWork6 from "../../assets/MovieMess.png";
 import { Links } from "react-router-dom";
 
 const About = () => {
@@ -61,6 +62,30 @@ const About = () => {
     },
   ];
   const projects = [
+    {
+      src: imageWork6,
+      title: "Movie Mess",
+      description:
+        "Movie Message is web app where people can send their menfess with attached movie anonymously.",
+      badges: [
+        "Next.js",
+        "PostgreSQL",
+        "Prisma",
+        "Supabase",
+        "Tailwind CSS",
+        "ShadCN UI"
+      ],
+      links: [
+        {
+          label: "Live",
+          url: "https://movie-message.vercel.app/dashboard",
+        },
+        {
+          label: "Repository",
+          url: "https://github.com/muhammadrama19/movie-message"
+        }
+      ]
+    },
     {
       src: myImage,
       title: "LalajoEuy Movie ",
