@@ -47,6 +47,7 @@ const About = () => {
       description: [
         "Currently working as backend engineer using Odoo with Python and PostgreSQL developing for ERP System.",
       ],
+      badges: ["Python", "PostgreSQL", "Odoo", "ERP"]
     },
     {
       date: "Feb 2024 - Oktober 2024",
