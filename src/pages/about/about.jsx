@@ -47,7 +47,7 @@ const About = () => {
       description: [
         "Currently working as backend engineer using Odoo with Python and PostgreSQL developing for ERP System.",
       ],
-      badges: ["Python", "PostgreSQL", "Odoo", "ERP"]
+      badges: ["Python", "PostgreSQL", "Odoo", "ERP", "XML", "JavaScript"]
     },
     {
       date: "Feb 2024 - Oktober 2024",
@@ -217,10 +217,10 @@ const About = () => {
           </p>
           <p className="about-description">
             I specialize in building responsive and scalable applications using
-            React.js, Vue.js, Bootstrap, and CSS. Also have fundamental in UI/UX
+            React.js, Vue.js, Tailwind/Bootstrap. Also have fundamental in UI/UX
             and familiar with figma. I have a keen eye for detail, which helps
             me create reusable components that enhance code maintainability and
-            efficiency. Additionally, I’m familiar with REST APIs, basic SQL,
+            efficiency. Additionally, I’m familiar with REST APIs, SQL,
             and MongoDB, and I have hands-on experience in backend development
             to ensure smooth integrations across the stack.
           </p>
@@ -248,6 +248,11 @@ const About = () => {
         </Col>
       </Row>
       <Row id="experiences" className="mb-4">
+        <h4>
+          <span className="d-flex align-items-start text-light border-bottom pb-3">
+            Experience
+          </span>
+        </h4>
         <Col xs={12} md={12}>
           {experiences.map((exp, index) => (
             <Exp
@@ -271,6 +276,11 @@ const About = () => {
         </Col>
       </Row>
       <Row id="projects" className="mb-4">
+        <h4>
+          <span className="d-flex align-items-start text-light border-bottom pb-3">
+            Projects
+          </span>
+        </h4>
         <Col xs={12} md={12}>
           {projects.map((project, index) => (
             <WorkCard
